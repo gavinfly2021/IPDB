@@ -1,11 +1,13 @@
 name: BestProxy
 
 on:
-  push:
-    branches:
-      - main
+  #push:
+   # branches:
+    #  - main
     paths:
       - bestproxy.txt
+    schedule:
+      - cron: '*/10 * * * *'
 
 jobs:
   update_dns:
