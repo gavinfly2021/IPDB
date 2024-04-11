@@ -3,11 +3,11 @@ name: BestProxy
 on:
   schedule:
       - cron: '*/10 * * * *'
-  #push:
-  branches:
+  push:
+    branches:
       - main
-       paths:
-         - bestproxy.txt
+    paths:
+      - bestproxy.txt
   
 
 jobs:
