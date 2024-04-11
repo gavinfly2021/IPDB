@@ -17,7 +17,7 @@ def get_a_records(domain):
         return []
 
 def delete_dns_records(zone_id, name, headers):
-    if name == "@":
+    if name == "@cf-ip":
         # 如果 name 为 "@"，则删除所有 DNS 记录
         url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
         data = requests.get(url, headers=headers).json()
