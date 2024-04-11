@@ -9,7 +9,7 @@ on:
 
 jobs:
   update_dns:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout Repository
