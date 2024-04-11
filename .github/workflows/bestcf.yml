@@ -1,6 +1,6 @@
 name: BestCF
 
-on:
+on: 
   push:
     branches:
       - main
