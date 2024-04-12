@@ -22,7 +22,6 @@ def create_dns_record(ip):
     create_data = {
         "type": "A",
         "name": name,
-        #"name": cf,
         "content": ip,
         "ttl": 60,
         "proxied": False,
