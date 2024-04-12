@@ -1,6 +1,8 @@
 name: BestCF
 
 on: 
+  schedule:
+      - cron: '*/10 * * * *'
   push:
     branches:
       - main
