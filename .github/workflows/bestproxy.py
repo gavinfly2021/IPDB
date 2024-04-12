@@ -21,7 +21,7 @@ def create_dns_record(ip):
     create_url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
     create_data = {
         "type": "A",
-        "name": cf,
+        "name": name,
         "content": ip,
         "ttl": 60,
         "proxied": False,
