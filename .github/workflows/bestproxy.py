@@ -5,7 +5,7 @@ import re
 # Get GitHub Secrets from environment variables
 api_token = os.environ.get("CLOUDFLARE_API_TOKEN")
 zone_id = os.environ.get("CLOUDFLARE_ZONE_ID")
-name = "bestproxy"
+name = "cf"
 ipdb_api_url = "https://ipdb.api.030101.xyz/?type=bestproxy"
 
 headers = {
@@ -21,8 +21,8 @@ def create_dns_record(ip):
     create_url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
     create_data = {
         "type": "A",
-        #"name": name,
-        "name": cf,
+        "name": name,
+        #"name": cf,
         "content": ip,
         "ttl": 60,
         "proxied": False,
